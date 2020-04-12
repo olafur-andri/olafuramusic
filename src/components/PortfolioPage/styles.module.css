@@ -1,0 +1,9 @@
+.wrapper {
+  transition: opacity 400ms ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.visibleWrapper {
+  composes: wrapper;
+  opacity: 1;
+}

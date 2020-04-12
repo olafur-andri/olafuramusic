@@ -1,0 +1,36 @@
+[
+  {
+    "name": "THE AMBER SPHERE",
+    "slug": "the-amber-sphere",
+    "tracks": [
+      {
+        "name": "Village on a Mountain",
+        "minutes": 2,
+        "seconds": 15,
+        "year": 2020,
+        "id": "neEk2deY9mg"
+      },
+      {
+        "name": "Like Any Other Walk",
+        "minutes": 2,
+        "seconds": 39,
+        "year": 2020,
+        "id": "-9Aj0izXfH0"
+      },
+      {
+        "name": "The Hidden Cave",
+        "minutes": 2,
+        "seconds": 49,
+        "year": 2020,
+        "id": "SYDFn-0aXcY"
+      },
+      {
+        "name": "A Golden Revolution",
+        "minutes": 2,
+        "seconds": 25,
+        "year": 2020,
+        "id": "ofAAKGMXJlc"
+      }
+    ]
+  }
+]
