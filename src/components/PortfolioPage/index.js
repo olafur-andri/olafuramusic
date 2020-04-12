@@ -16,20 +16,26 @@ const PortfolioPage = () => {
       .finally(() => setIsLoaded(true));
   }, []);
 
+  let counter = portfolio.length + 1;
+
   return isError
     ? <FetchErrorPage />
     : (
       <div
         className={isLoaded ? styles.visibleWrapper : styles.wrapper}
       >
-        {portfolio.map((album) => (
-          <PortfolioAlbum
-            key={album.name}
-            name={album.name}
-            slug={album.slug}
-            tracks={album.tracks}
-          />
-        ))}
+        {portfolio.map((album) => {
+          counter -= 1;
+          return (
+            <PortfolioAlbum
+              key={album.name}
+              name={album.name}
+              slug={album.slug}
+              tracks={album.tracks}
+              number={counter}
+            />
+          );
+        })}
       </div>
     );
 };

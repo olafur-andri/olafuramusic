@@ -1,0 +1,36 @@
+.albumContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.albumArtContainer {
+  margin: -2% 0 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.albumArt {
+  width: 100%;
+  height: calc(100vw * (691/1440));
+  max-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.tracksContainer {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1);
+  height: 653px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}

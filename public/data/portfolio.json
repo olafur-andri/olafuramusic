@@ -32,5 +32,60 @@
         "id": "ofAAKGMXJlc"
       }
     ]
+  },
+  {
+    "name": "Lego War of Kings, Vol. 1",
+    "slug": "lego-war-of-kings-vol-1",
+    "tracks": [
+      {
+        "name": "War of Kings",
+        "minutes": 0,
+        "seconds": 56,
+        "year": 2019,
+        "id": "Bb8qUn9PHMc"
+      },
+      {
+        "name": "Men of War",
+        "minutes": 3,
+        "seconds": 25,
+        "year": 2019,
+        "id": "pLSv0NJJ0ms"
+      },
+      {
+        "name": "Farewell",
+        "minutes": 1,
+        "seconds": 25,
+        "year": 2019,
+        "id": "3nSxCoGSTUY"
+      },
+      {
+        "name": "Lanson's Theme",
+        "minutes": 1,
+        "seconds": 44,
+        "year": 2019,
+        "id": "tlxfGXL-l5o"
+      },
+      {
+        "name": "Gilwin's Theme",
+        "minutes": 1,
+        "seconds": 54,
+        "year": 2019,
+        "id": "_WnkbNlD02s"
+      },
+      {
+        "name": "Povenmire's Theme",
+        "minutes": 1,
+        "seconds": 59,
+        "year": 2019,
+        "id": "E0032cGduGQ"
+      },
+      {
+        "name": "Drakkaris's Theme",
+        "minutes": 1,
+        "seconds": 46,
+        "year": 2019,
+        "id": "qkJ6EYNibG0"
+      }
+    ]
   }
 ]
