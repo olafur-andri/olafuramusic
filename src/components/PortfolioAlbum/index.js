@@ -2,18 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-scroll-parallax';
 import styles from './styles.module.css';
+import TracksCarousel from '../TracksCarousel';
 
 const PortfolioAlbum = (props) => {
   const {
-    name, slug, tracks, number,
+    name, slug, tracksColor, tracks, backColor,
   } = props;
 
   return (
-    <div className={styles.albumContainer} style={{ zIndex: number }}>
+    <div className={styles.albumContainer}>
       <Parallax
         className={styles.albumArtContainer}
-        y={[-40, 40]}
+        y={[-30, 30]}
         tagOuter="figure"
+        styleOuter={{ background: backColor }}
       >
         <img
           className={styles.albumArt}
@@ -22,9 +24,10 @@ const PortfolioAlbum = (props) => {
         />
       </Parallax>
 
-      <div className={styles.tracksContainer}>
-        Some tracks here
-      </div>
+      <TracksCarousel
+        tracks={tracks}
+        tracksColor={tracksColor}
+      />
     </div>
   );
 };
@@ -32,6 +35,7 @@ const PortfolioAlbum = (props) => {
 PortfolioAlbum.propTypes = {
   name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  tracksColor: PropTypes.string.isRequired,
   tracks: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     minutes: PropTypes.number.isRequired,
@@ -39,7 +43,7 @@ PortfolioAlbum.propTypes = {
     year: PropTypes.number.isRequired,
     id: PropTypes.string.isRequired,
   })).isRequired,
-  number: PropTypes.number.isRequired,
+  backColor: PropTypes.string.isRequired,
 };
 
 export default PortfolioAlbum;

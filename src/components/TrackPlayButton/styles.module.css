@@ -1,0 +1,39 @@
+:root {
+  --icon-size: 2rem;
+}
+
+.playButton {
+  --padding: 1.4;
+  height: calc(var(--icon-size) * var(--padding));
+  width: calc(var(--icon-size) * var(--padding));
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playButton::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  will-change: transform;
+  transition: transform 100ms ease;
+  transform: scale(0);
+}
+.playButton:hover::after, .playButton:focus::after {
+  transform: scale(1);
+}
+
+.buttonIcon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}

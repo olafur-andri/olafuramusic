@@ -5,32 +5,23 @@
   align-items: center;
   width: 100%;
 }
+/* .albumContainer:not(:first-of-type) {
+  margin-top: -2%;
+} */
 
 .albumArtContainer {
-  margin: -2% 0 0 0;
+  margin: 0;
   padding: 0;
   position: relative;
+  max-height: 1000px;
+  background-color: #FFFFFF;
 }
 
 .albumArt {
   width: 100%;
-  height: calc(100vw * (691/1440));
-  max-height: 90vh;
+  height: calc(100vw / 2.4);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-}
-
-.tracksContainer {
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1);
-  height: 653px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
 }

@@ -16,26 +16,30 @@ const PortfolioPage = () => {
       .finally(() => setIsLoaded(true));
   }, []);
 
-  let counter = portfolio.length + 1;
-
   return isError
     ? <FetchErrorPage />
     : (
       <div
         className={isLoaded ? styles.visibleWrapper : styles.wrapper}
       >
-        {portfolio.map((album) => {
-          counter -= 1;
-          return (
-            <PortfolioAlbum
-              key={album.name}
-              name={album.name}
-              slug={album.slug}
-              tracks={album.tracks}
-              number={counter}
-            />
-          );
-        })}
+        <header className={styles.pageHeader}>
+          <h4 className={styles.logoText}>ÓLAFUR ANDRI</h4>
+          <h5 className={styles.subtitle}>
+            MY PORTFOLI
+            <span className={styles.lastLetter}>O</span>
+          </h5>
+        </header>
+
+        {portfolio.map((album) => (
+          <PortfolioAlbum
+            key={album.name}
+            name={album.name}
+            slug={album.slug}
+            tracksColor={album.tracksColor}
+            tracks={album.tracks}
+            backColor={album.backColor}
+          />
+        ))}
       </div>
     );
 };

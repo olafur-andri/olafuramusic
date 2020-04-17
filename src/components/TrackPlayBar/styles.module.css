@@ -1,0 +1,63 @@
+:root {
+  --background-height: 0.25rem;
+}
+
+.barContainer {
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+}
+.barContainer * {
+  pointer-events: none;
+}
+
+.barBackground {
+  height: var(--background-height);
+  width: 100%;
+  border-radius: 100rem;
+  opacity: 0.08;
+}
+
+.barThumb {
+  --size: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: calc(var(--size) / -2);
+  margin-left: calc(var(--size) / -2 + 2px);
+  height: var(--size);
+  width: var(--size);
+  border-radius: 100%;
+}
+.barThumb::after {
+  --size: 175%;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.09);
+  will-change: transform;
+  transform: scale(0);
+  transition: transform 100ms ease;
+  height: var(--size);
+  width: var(--size);
+  margin-top: calc((100% - var(--size)) / 2);
+  margin-left: calc((100% - var(--size)) / 2);
+}
+.barContainer:hover .barThumb::after,
+.barContainer:focus .barThumb::after {
+  transform: scale(1);
+}
+
+.barProgress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: var(--background-height);
+  margin-top: calc(var(--background-height) / -2);
+  width: 100%;
+  border-radius: 100rem;
+}

@@ -2,6 +2,8 @@
   {
     "name": "THE AMBER SPHERE",
     "slug": "the-amber-sphere",
+    "tracksColor": "#4A5569",
+    "backColor": "linear-gradient(to bottom, transparent, transparent 50%, #FFFFFF 60%, #FFFFFF), linear-gradient(to right, #FCFCFC, #FBFBFB)",
     "tracks": [
       {
         "name": "Village on a Mountain",
@@ -36,6 +38,8 @@
   {
     "name": "Lego War of Kings, Vol. 1",
     "slug": "lego-war-of-kings-vol-1",
+    "tracksColor": "#424242",
+    "backColor": "#FFFFFF",
     "tracks": [
       {
         "name": "War of Kings",
@@ -85,6 +89,56 @@
         "seconds": 46,
         "year": 2019,
         "id": "qkJ6EYNibG0"
+      }
+    ]
+  },
+  {
+    "name": "Begin",
+    "slug": "begin",
+    "tracksColor": "#5A534B",
+    "backColor": "#FFFFFF",
+    "tracks": [
+      {
+        "name": "Not Coming Back",
+        "minutes": 1,
+        "seconds": 25,
+        "year": 2019,
+        "id": "_3Gu7ZdxnrI"
+      },
+      {
+        "name": "Lullaby",
+        "minutes": 2,
+        "seconds": 12,
+        "year": 2019,
+        "id": "l7S29tCOD1w"
+      },
+      {
+        "name": "Last Stand",
+        "minutes": 1,
+        "seconds": 41,
+        "year": 2019,
+        "id": "r-wlDAkE_q4"
+      },
+      {
+        "name": "A Traveler's Tale",
+        "minutes": 1,
+        "seconds": 30,
+        "year": 2019,
+        "id": "d-rIRUoGU1Q"
+      },
+      {
+        "name": "Starting Again",
+        "minutes": 1,
+        "seconds": 55,
+        "year": 2019,
+        "id": "d_yqD5L7NVw"
+      },
+      {
+        "name": "A Walk and a Run",
+        "minutes": 2,
+        "seconds": 39,
+        "year": 2019,
+        "id": "1_k3MCOt_88"
       }
     ]
   }

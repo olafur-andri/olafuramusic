@@ -1,0 +1,31 @@
+.trackContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  max-width: 471px;
+}
+.trackContainer:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+.trackInfoContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 30px;
+}
+
+.trackName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.trackLengthYear {
+  opacity: 0.79;
+  font-size: 0.875rem;
+  margin: 6px 0 7px 0;
+}
