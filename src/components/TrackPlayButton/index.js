@@ -75,14 +75,15 @@ const pauseIcon = (color) => (
 
 const TrackPlayButton = (props) => {
   const {
-    color, onClick, isPlaying, className,
+    color, onClick, isPlaying, className, tabIndex,
   } = props;
 
   return (
     <button
       type="button"
-      className={styles.playButton}
+      className={`${styles.playButton} ${className}`}
       onClick={onClick}
+      tabIndex={tabIndex}
     >
       {isPlaying ? pauseIcon(color) : playIcon(color)}
     </button>
@@ -93,6 +94,10 @@ TrackPlayButton.propTypes = {
   color: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   isPlaying: PropTypes.bool.isRequired,
+  tabIndex: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
   className: PropTypes.string,
 };
 

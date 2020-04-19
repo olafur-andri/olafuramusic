@@ -1,3 +1,7 @@
+:root {
+  --social-icon-size: 2.25rem;
+}
+
 .footerContainer {
   background-color: #242424;
   display: flex;
@@ -24,8 +28,19 @@
 }
 
 .linkIcon {
-  width: 2.25rem;
+  width: var(--social-icon-size);
 }
-.linkIcon:not(:last-of-type) {
+
+.socialLink {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--social-icon-size) * var(--padding));
+  height: calc(var(--social-icon-size) * var(--padding));
+}
+
+.socialLink:not(:last-of-type) {
   margin-right: 50px;
 }

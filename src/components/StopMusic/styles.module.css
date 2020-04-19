@@ -1,0 +1,83 @@
+:root {
+  --back-color: rgb(231, 98, 98);
+}
+
+.stopMusicButton {
+  --width: 12.5rem;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: var(--width);
+  height: 50px;
+  margin-left: calc(var(--width) / -2);
+  z-index: 3;
+  border-radius: 100rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: rgb();
+  outline: none;
+  border: none;
+  background-color: var(--back-color);
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 30px;
+  align-items: center;
+  /* box-shadow: 0 2px 6px 0 rgba(231, 98, 98, 0.6); */
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 200ms ease, opacity 200ms ease;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.visibleStopButton {
+  composes: stopMusicButton;
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: initial;
+}
+.stopMusicButton::after {
+  --outer-pad: 6px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + (2 * var(--outer-pad)));
+  height: calc(100% + (2 * var(--outer-pad)));
+  margin-top: calc(var(--outer-pad) * -1);
+  margin-left: calc(var(--outer-pad) * -1);
+  z-index: -1;
+  background-color: rgba(231, 98, 98, 0.3);
+  border-radius: 100rem;
+  will-change: transform;
+  transition: transform 150ms ease-in-out;
+  transform: scale(0.7);
+}
+.stopMusicButton:hover::after,
+.stopMusicButton:focus::after {
+  transform: scale(1);
+}
+
+.stopIcon {
+  --back-size: 20px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  height: var(--back-size);
+  width: var(--back-size);
+  margin-right: 15px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.stopIcon::after {
+  --square-size: 8px;
+  content: '';
+  height: var(--square-size);
+  width: var(--square-size);
+  background-color: var(--back-color);
+}

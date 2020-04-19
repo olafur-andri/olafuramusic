@@ -12,7 +12,6 @@ const Footer = () => (
         image="spotify"
         altText="Spotify"
         linkUrl="https://open.spotify.com/artist/0i6oObeqD3Tueuq0nLWQ50"
-        className={styles.linkIcon}
       />
 
       {/* YouTube */}
@@ -20,7 +19,6 @@ const Footer = () => (
         image="youtube"
         altText="Youtube"
         linkUrl="https://www.youtube.com/channel/UCtuwnopjUjZnKhpZEeNJx_Q"
-        className={styles.linkIcon}
       />
 
       {/* Twitter */}
@@ -28,7 +26,6 @@ const Footer = () => (
         image="twitter"
         altText="Twitter"
         linkUrl="https://twitter.com/olafuramusic"
-        className={styles.linkIcon}
       />
 
       {/* Facebook */}
@@ -36,7 +33,6 @@ const Footer = () => (
         image="facebook"
         altText="Facebook"
         linkUrl="https://www.facebook.com/olafur.andri.77"
-        className={styles.linkIcon}
       />
     </div>
   </div>

@@ -6,7 +6,7 @@ import TracksCarousel from '../TracksCarousel';
 
 const PortfolioAlbum = (props) => {
   const {
-    name, slug, tracksColor, tracks, backColor,
+    name, slug, tracksColor, tracks, backColor, downloadLink,
   } = props;
 
   return (
@@ -24,10 +24,25 @@ const PortfolioAlbum = (props) => {
         />
       </Parallax>
 
-      <TracksCarousel
-        tracks={tracks}
-        tracksColor={tracksColor}
-      />
+      <div className={styles.albumTracksContainer}>
+        <TracksCarousel
+          tracks={tracks}
+          tracksColor={tracksColor}
+        />
+
+        <a
+          href={downloadLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.buttonLink}
+          style={{
+            borderColor: tracksColor,
+            color: tracksColor,
+          }}
+        >
+          Download Album
+        </a>
+      </div>
     </div>
   );
 };
@@ -44,6 +59,7 @@ PortfolioAlbum.propTypes = {
     id: PropTypes.string.isRequired,
   })).isRequired,
   backColor: PropTypes.string.isRequired,
+  downloadLink: PropTypes.string.isRequired,
 };
 
 export default PortfolioAlbum;

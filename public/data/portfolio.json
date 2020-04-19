@@ -4,6 +4,7 @@
     "slug": "the-amber-sphere",
     "tracksColor": "#4A5569",
     "backColor": "linear-gradient(to bottom, transparent, transparent 50%, #FFFFFF 60%, #FFFFFF), linear-gradient(to right, #FCFCFC, #FBFBFB)",
+    "downloadLink": "https://my.pcloud.com/publink/show?code=kZj2VxkZoLvINfR2Nrffp1s8mza8JVlkOdMX",
     "tracks": [
       {
         "name": "Village on a Mountain",
@@ -32,6 +33,13 @@
         "seconds": 25,
         "year": 2020,
         "id": "ofAAKGMXJlc"
+      },
+      {
+        "name": "Why Won't They Listen",
+        "minutes": 2,
+        "seconds": 8,
+        "year": 2020,
+        "id": "wG8ego3Mbws"
       }
     ]
   },
@@ -40,6 +48,7 @@
     "slug": "lego-war-of-kings-vol-1",
     "tracksColor": "#424242",
     "backColor": "#FFFFFF",
+    "downloadLink": "https://my.pcloud.com/publink/show?code=kZe2VxkZKKBJkqu5gD5CvfeY7jCVTkNBSAh7",
     "tracks": [
       {
         "name": "War of Kings",
@@ -97,6 +106,7 @@
     "slug": "begin",
     "tracksColor": "#5A534B",
     "backColor": "#FFFFFF",
+    "downloadLink": "https://my.pcloud.com/publink/show?code=kZP2VxkZ2qyPzbvXntJfUx7zQSY9uS2rJh1X",
     "tracks": [
       {
         "name": "Not Coming Back",

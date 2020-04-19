@@ -14,7 +14,7 @@ const setIsSeeking = (value) => { isSeeking = value; };
 const Track = (props) => {
   const {
     tracksColor, name, minutes, seconds, year, id, currentTrack,
-    setCurrentTrack,
+    setCurrentTrack, tabIndex,
   } = props;
 
   const [position, setPosition] = useState(0);
@@ -39,6 +39,7 @@ const Track = (props) => {
         color={tracksColor}
         onClick={onPlay}
         isPlaying={isPlaying}
+        tabIndex={tabIndex}
       />
 
       <div className={styles.trackInfoContainer}>
@@ -69,6 +70,8 @@ const Track = (props) => {
           position={position}
           setPosition={setPosition}
           setIsSeeking={setIsSeeking}
+          tabIndex={tabIndex}
+          onPlay={onPlay}
         />
 
         <ReactPlayer
@@ -98,6 +101,10 @@ Track.propTypes = {
   id: PropTypes.string.isRequired,
   currentTrack: PropTypes.string.isRequired,
   setCurrentTrack: PropTypes.func.isRequired,
+  tabIndex: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
 };
 
 const mapStateToProps = (storeState) => ({

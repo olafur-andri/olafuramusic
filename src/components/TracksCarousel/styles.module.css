@@ -1,5 +1,8 @@
+:root {
+  --max-width: 471px;
+}
+
 .tracksContainer {
-  padding: 50px 0;
   background-color: #FFFFFF;
   /* box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1); */
   width: 100%;
@@ -9,4 +12,86 @@
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+.scrollContainer {
+  width: 100%;
+  max-width: var(--max-width);
+  overflow: hidden;
+  padding: 0;
+}
+
+.scrollContent {
+  transition: transform 400ms ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.trackPage {
+  width: var(--max-width);
+  flex-shrink: 0;
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.controlButton {
+  --size: 30px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px;
+}
+.controlButton:first-of-type {
+  margin-left: 0;
+}
+.controlButton:last-of-type {
+  margin-right: 0;
+}
+.controlButton::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  will-change: transform;
+  transform: scale(0);
+  transition: transform 100ms ease;
+}
+.controlButton:hover::after,
+.controlButton:focus::after {
+  transform: scale(1);
+}
+
+.controlDot {
+  --size: 12px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 100%;
+  position: relative;
+  transition: background-color 100ms ease;
+  background-color: #FFFFFF;
+}
+.controlDot:not(:last-of-type) {
+  margin-right: 15px;
 }

@@ -11,32 +11,6 @@
   margin: auto;
 }
 
-.pageHeader {
+.coloredHeader {
   background: linear-gradient(to right, #FCFCFC, #FBFBFB);
-  margin-bottom: -20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #424242;
-  padding: 50px 0;
-}
-
-.logoText {
-  margin: 0;
-  font-size: 2.1rem;
-  font-weight: 600;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.subtitle {
-  margin: 0 0 0 0;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.7rem;
-}
-
-.lastLetter {
-  letter-spacing: initial;
 }

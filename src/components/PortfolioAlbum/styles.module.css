@@ -25,3 +25,53 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
+
+.albumTracksContainer {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  padding: 50px 0;
+}
+
+.buttonLink {
+  position: relative;
+  margin-top: 50px;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border-width: 2px;
+  border-radius: 100rem;
+  border-style: solid;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 18px 45px;
+  background-color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+.buttonLink::after {
+  --padding: 8px;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: calc(100% + (2 * var(--padding)));
+  height: calc(100% + (2 * var(--padding)));
+  border-radius: 100rem;
+  margin-top: calc(var(--padding) * -1);
+  margin-left: calc(var(--padding) * -1);
+  background-color: rgba(0, 0, 0, 0.08);
+  will-change: transform;
+  transition: transform 100ms ease;
+  transform: scale(0.8);
+}
+.buttonLink:focus::after,
+.buttonLink:hover::after {
+  transform: scale(1);
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import PortfolioPage from '../PortfolioPage';
 import NotFoundPage from '../NotFoundPage';
-import Footer from '../Footer';
+import ParallaxCache from '../ParallaxCache';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route exact path="*" component={NotFoundPage} />
       </Switch>
 
-      <Footer />
+      <ParallaxCache />
     </>
   );
 }

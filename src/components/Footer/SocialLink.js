@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles.module.css';
 
 const SocialLink = (props) => {
   const {
@@ -9,14 +10,14 @@ const SocialLink = (props) => {
   return (
     <a
       href={linkUrl}
-      className={className}
+      className={`${styles.socialLink} ${className}`}
       target="_blank"
       rel="noopener noreferrer"
     >
       <img
         src={`/images/social/${image}.png`}
         alt={altText}
-        style={{ width: '100%' }}
+        className={styles.linkIcon}
       />
     </a>
   );
