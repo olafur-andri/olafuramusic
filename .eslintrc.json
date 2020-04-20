@@ -22,6 +22,7 @@
     "plugins": [
         "react"
     ],
+    "ignorePatterns": ["node_modules/", "build/", "**/*.test.js"],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }

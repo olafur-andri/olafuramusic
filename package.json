@@ -22,7 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test-watch": "react-scripts test",
+    "test": "jest",
     "lint": "node ./node_modules/eslint/bin/eslint.js \"**/*.js\"",
     "eject": "react-scripts eject",
     "server": "node server.js"
