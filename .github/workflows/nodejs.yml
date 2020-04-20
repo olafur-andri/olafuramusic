@@ -30,3 +30,8 @@ jobs:
     - run: npm run lint
       env:
         CI: true
+
+    - name: Login to Heroku Container registry
+      env:
+        HEROKU_API_KEY: ${{ HEROKU_API_KEY }}
+      run: heroku container:login
