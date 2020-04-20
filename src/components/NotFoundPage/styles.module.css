@@ -15,7 +15,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   will-change: opacity;
-  transition: opacity 400ms ease;
+  transition: opacity 400ms 400ms ease;
   opacity: 0;
   pointer-events: none;
 }
