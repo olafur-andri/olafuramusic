@@ -48,6 +48,8 @@ class TrackPlayBar extends React.Component {
     setIsSeeking(true);
     window.addEventListener('mousemove', this.onMove);
     window.addEventListener('mouseup', this.onEnd);
+    window.addEventListener('touchmove', this.onMove, { passive: false });
+    window.addEventListener('touchend', this.onEnd);
     this.updateThumbPosition(e);
   }
 
@@ -61,6 +63,8 @@ class TrackPlayBar extends React.Component {
     setIsSeeking(false);
     window.removeEventListener('mousemove', this.onMove);
     window.removeEventListener('mouseup', this.onEnd);
+    window.removeEventListener('touchmove', this.onMove, { passive: false });
+    window.removeEventListener('touchend', this.onEnd);
     const newPosition = this.updateThumbPosition(e);
     onSeek(newPosition);
   }
@@ -76,7 +80,13 @@ class TrackPlayBar extends React.Component {
   updateThumbPosition(e) {
     const { duration, setPosition } = this.props;
     const containerWidth = this.containerRef.current.offsetWidth;
-    const mouseX = e.clientX || e.nativeEvent.clientX;
+    const native = e.nativeEvent;
+    let mouseX = e.clientX;
+
+    if (native && native.clientX) mouseX = native.clientX;
+    if (!mouseX && e.touches[0]) mouseX = e.touches[0].clientX;
+    if (!mouseX && e.changedTouches[0]) mouseX = e.changedTouches[0].clientX;
+
     const containerLeft = this.containerRef.current.getBoundingClientRect().left;
     let offsetX = mouseX - containerLeft;
     offsetX = offsetX < 0 ? 0 : offsetX;
@@ -95,7 +105,7 @@ class TrackPlayBar extends React.Component {
       <div
         className={styles.barContainer}
         onMouseDown={this.onStart}
-        onMouseUp={this.onEnd}
+        onTouchStart={this.onStart}
         role="button"
         onFocus={this.onFocus}
         onBlur={this.onBlur}

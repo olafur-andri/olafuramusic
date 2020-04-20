@@ -10,7 +10,7 @@
   width: var(--width);
   height: 50px;
   margin-left: calc(var(--width) / -2);
-  z-index: 3;
+  z-index: 4;
   border-radius: 100rem;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
