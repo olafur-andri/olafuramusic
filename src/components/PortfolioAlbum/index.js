@@ -6,7 +6,7 @@ import TracksCarousel from '../TracksCarousel';
 
 const PortfolioAlbum = (props) => {
   const {
-    name, slug, tracksColor, tracks, backColor, downloadLink,
+    slug, tracksColor, tracks, backColor, downloadLink,
   } = props;
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -60,7 +60,6 @@ const PortfolioAlbum = (props) => {
 };
 
 PortfolioAlbum.propTypes = {
-  name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   tracksColor: PropTypes.string.isRequired,
   tracks: PropTypes.arrayOf(PropTypes.shape({

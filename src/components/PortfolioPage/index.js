@@ -35,7 +35,6 @@ const PortfolioPage = () => {
       {portfolio.map((album) => (
         <PortfolioAlbum
           key={album.name}
-          name={album.name}
           slug={album.slug}
           tracksColor={album.tracksColor}
           tracks={album.tracks}
