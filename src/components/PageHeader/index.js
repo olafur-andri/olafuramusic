@@ -16,7 +16,7 @@ const PageHeader = (props) => {
 
   return (
     <header className={`${styles.pageHeader} ${className}`}>
-      <h4 className={styles.logoText}>ÓLAFUR ANDRI'</h4>
+      <h4 className={styles.logoText}>ÓLAFUR ANDRI</h4>
       {getSubtitle(subtitle)}
     </header>
   );
