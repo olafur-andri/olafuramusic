@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-scroll-parallax';
 import styles from './styles.module.css';
@@ -8,9 +8,16 @@ const PortfolioAlbum = (props) => {
   const {
     name, slug, tracksColor, tracks, backColor, downloadLink,
   } = props;
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const imageUrl = `/images/album-arts/${slug}.png`;
+  const image = new Image();
+  const onLoad = () => setIsLoaded(true);
+  image.addEventListener('load', onLoad);
+  image.src = imageUrl;
 
   return (
-    <div className={styles.albumContainer}>
+    <div className={isLoaded ? styles.visibleContainer : styles.albumContainer}>
       <Parallax
         className={styles.albumArtContainer}
         y={[-30, 30]}
@@ -19,7 +26,7 @@ const PortfolioAlbum = (props) => {
       >
         <img
           className={styles.albumArt}
-          src={`/images/album-arts/${slug}.png`}
+          src={imageUrl}
           alt={name}
         />
       </Parallax>

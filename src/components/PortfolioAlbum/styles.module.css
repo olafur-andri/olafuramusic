@@ -4,10 +4,15 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  transition: opacity 400ms ease;
+  opacity: 0;
+  pointer-events: none;
 }
-/* .albumContainer:not(:first-of-type) {
-  margin-top: -2%;
-} */
+.visibleContainer {
+  composes: albumContainer;
+  opacity: 1;
+  pointer-events: initial;
+}
 
 .albumArtContainer {
   margin: 0;
