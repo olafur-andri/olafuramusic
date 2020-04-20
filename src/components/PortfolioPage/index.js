@@ -21,34 +21,32 @@ const PortfolioPage = () => {
       .finally(() => setIsLoaded(true));
   }, []);
 
-  return isError
-    ? <FetchErrorPage />
-    : (
-      <div
-        className={isLoaded ? styles.visibleWrapper : styles.wrapper}
-      >
-        <StopMusic />
+  return isError ? <FetchErrorPage /> : (
+    <div
+      className={isLoaded ? styles.visibleWrapper : styles.wrapper}
+    >
+      <PageHeader
+        subtitle="MY PORTFOLIO"
+        className={isError ? '' : styles.coloredHeader}
+      />
 
-        <PageHeader
-          subtitle="MY PORTFOLIO"
-          className={styles.coloredHeader}
+      <StopMusic />
+
+      {portfolio.map((album) => (
+        <PortfolioAlbum
+          key={album.name}
+          name={album.name}
+          slug={album.slug}
+          tracksColor={album.tracksColor}
+          tracks={album.tracks}
+          backColor={album.backColor}
+          downloadLink={album.downloadLink}
         />
+      ))}
 
-        {portfolio.map((album) => (
-          <PortfolioAlbum
-            key={album.name}
-            name={album.name}
-            slug={album.slug}
-            tracksColor={album.tracksColor}
-            tracks={album.tracks}
-            backColor={album.backColor}
-            downloadLink={album.downloadLink}
-          />
-        ))}
-
-        <Footer />
-      </div>
-    );
+      <Footer />
+    </div>
+  );
 };
 
 export default PortfolioPage;

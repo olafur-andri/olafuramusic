@@ -25,10 +25,16 @@
 .albumArt {
   width: 100%;
   height: calc(100vw / 2.4);
+  min-height: 542px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: cover;
+}
+.albumArtWide, .albumArtNarrow {
+  composes: albumArt;
+}
+.albumArtNarrow {
+  display: none;
 }
 
 .albumTracksContainer {
@@ -79,4 +85,14 @@
 .buttonLink:focus::after,
 .buttonLink:hover::after {
   transform: scale(1);
+}
+
+@media screen and (max-width: 1000px) {
+  .albumArtWide {
+    display: none;
+  }
+
+  .albumArtNarrow {
+    display: block;
+  }
 }

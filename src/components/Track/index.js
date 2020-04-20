@@ -56,7 +56,7 @@ const Track = (props) => {
           className={styles.trackLengthYear}
           style={{ color: tracksColor }}
         >
-          {`${minutes}:${seconds}`}
+          {`${minutes}:${seconds.toString().padStart(2, '0')}`}
           &nbsp;&bull;&nbsp;
           {year}
         </p>

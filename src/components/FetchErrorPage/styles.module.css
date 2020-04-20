@@ -1,0 +1,22 @@
+.pageWrapper {
+  background-image: url('/images/wallpapers/black-dunes.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.textContentContainer {
+  text-align: center;
+  color: #242424;
+  max-width: 500px;
+}
+
+.text {
+  margin-bottom: 25px;
+}

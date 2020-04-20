@@ -10,11 +10,12 @@ const PortfolioAlbum = (props) => {
   } = props;
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const imageUrl = `/images/album-arts/${slug}.png`;
+  const wideUrl = `/images/album-wides/${slug}.png`;
+  const narrowUrl = `/images/album-narrows/${slug}.png`;
   const image = new Image();
   const onLoad = () => setIsLoaded(true);
   image.addEventListener('load', onLoad);
-  image.src = imageUrl;
+  image.src = wideUrl;
 
   return (
     <div className={isLoaded ? styles.visibleContainer : styles.albumContainer}>
@@ -22,12 +23,16 @@ const PortfolioAlbum = (props) => {
         className={styles.albumArtContainer}
         y={[-30, 30]}
         tagOuter="figure"
-        styleOuter={{ background: backColor }}
+        styleOuter={{ background: backColor, width: '100%' }}
+        styleInner={{ width: '100%' }}
       >
-        <img
-          className={styles.albumArt}
-          src={imageUrl}
-          alt={name}
+        <div
+          className={styles.albumArtWide}
+          style={{ backgroundImage: `url('${wideUrl}')` }}
+        />
+        <div
+          className={styles.albumArtNarrow}
+          style={{ backgroundImage: `url('${narrowUrl}')` }}
         />
       </Parallax>
 

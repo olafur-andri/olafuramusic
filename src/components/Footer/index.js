@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import SocialLink from './SocialLink';
 
-const Footer = () => (
-  <div className={styles.footerContainer}>
+const Footer = ({ className }) => (
+  <div className={`${styles.footerContainer} ${className}`}>
     <h3 className={styles.footerLogo}>ÓLAFUR ANDRI</h3>
 
     <div className={styles.linkContainer}>
@@ -37,5 +38,13 @@ const Footer = () => (
     </div>
   </div>
 );
+
+Footer.propTypes = {
+  className: PropTypes.string,
+};
+
+Footer.defaultProps = {
+  className: '',
+};
 
 export default Footer;

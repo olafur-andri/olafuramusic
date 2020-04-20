@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
+import LinkButton from '../LinkButton';
 
 const NotFoundPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,7 +14,10 @@ const NotFoundPage = () => {
     <div className={isLoaded ? styles.visibleWrapper : styles.pageWrapper}>
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>Page Not Found</h1>
-        <a href="/" className={styles.link}>Return Home</a>
+        <LinkButton
+          anchorText="Return Home"
+          href="/"
+        />
       </div>
     </div>
   );
